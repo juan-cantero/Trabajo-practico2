@@ -41,17 +41,23 @@ public class Complejo {
     }
 
     public float fase() {
-        return (float)Math.atan(this.imaginario / this.real)
+        return (float)Math.atan(this.imaginario / this.real);
     }
 
     public float conjugado() {
         return this.real - this.imaginario;
     }
 
-    public void multiplicar(Complejo complejo) {
-        //float multiplicacion;
-        //multiplicacion = this.real*(complejo.real + complejo.imaginario)
-        return;
+    public float multiplicar(Complejo complejo) {
+        float multiplicacion;
+        float realA = this.real;
+        float imaginarioA = this.imaginario;
+        float realB = complejo.real;
+        float imaginarioB = complejo.imaginario;
+        multiplicacion = realA * realB + realA*imaginarioB + imaginarioA * realB + (imaginarioA * imaginarioB *-1);
+        return multiplicacion;
     }
+
+
     
 }
